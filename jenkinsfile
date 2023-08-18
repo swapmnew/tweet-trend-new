@@ -1,0 +1,14 @@
+pipeline {
+    agent {
+      node {
+          label 'build-slave'
+      }
+    }
+    stages {
+        stage('clone_repo') {
+            steps {
+                git 'https://github.com/swapmnew/tweet-trend-new.git'
+            }
+        }
+    }
+}
